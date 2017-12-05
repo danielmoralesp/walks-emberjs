@@ -7,6 +7,9 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.resource('walks', function() {
+    this.resource('walk', { path: '/:walk_id' });
+  });
 });
 
 export default Router;
